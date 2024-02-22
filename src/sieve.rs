@@ -1,4 +1,4 @@
-use crate::helpers::isqrt;
+use crate::helpers::sqrt_u32;
 
 pub fn sieve_of_eratosthenes(n: u32) -> Vec<u32> {
     let mut is_prime_v: Vec<bool> = vec![true; usize::try_from(n).unwrap()];
@@ -6,7 +6,7 @@ pub fn sieve_of_eratosthenes(n: u32) -> Vec<u32> {
     is_prime_v[0] = false;
     is_prime_v[1] = false;
 
-    for i in 2..=isqrt(n) {
+    for i in 2..=sqrt_u32(n) {
         if is_prime_v[i as usize] {
             let mut j: u32 = i.pow(2);
             let mut coefficent: u32 = 1;
