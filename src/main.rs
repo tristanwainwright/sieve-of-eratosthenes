@@ -1,34 +1,7 @@
 mod helpers;
-use helpers::isqrt;
+mod sieve;
 
-fn sieve_of_eratosthenes(n: u32) -> Vec<u32> {
-    let mut is_prime_v: Vec<bool> = vec![true; usize::try_from(n).unwrap()];
-
-    is_prime_v[0] = false;
-    is_prime_v[1] = false;
-
-    for i in 2..=isqrt(n) {
-        if is_prime_v[i as usize] {
-            let mut j: u32 = i.pow(2);
-            let mut coefficent: u32 = 1;
-            while j < n {
-                is_prime_v[j as usize] = false;
-                j = i.pow(2) + coefficent * i;
-                coefficent += 1;
-            }
-        }
-    }
-
-    let mut primes: Vec<u32> = Vec::new();
-
-    for (pos, is_prime) in is_prime_v.iter().enumerate() {
-        if *is_prime {
-            primes.push(pos as u32);
-        }
-    }
-
-    return primes;
-}
+use crate::sieve::sieve_of_eratosthenes;
 
 fn main() {
     let n: u32 = 30;
