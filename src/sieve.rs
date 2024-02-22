@@ -1,4 +1,6 @@
-use crate::helpers::sqrt_u32;
+fn sqrt_u32(x: u32) -> u32 {
+    (x as f32).sqrt() as u32
+}
 
 pub fn sieve_of_eratosthenes(n: u32) -> Vec<u32> {
     let mut is_prime_v: Vec<bool> = vec![true; usize::try_from(n).unwrap()];
