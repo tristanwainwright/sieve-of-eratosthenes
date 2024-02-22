@@ -2,7 +2,7 @@
 
 ## Description
 
-The Sieve of Eratosthenes is an algorithm used to find all the prime numbers between the first prime `2` and a given limit `n`.
+The Sieve of Eratosthenes is an algorithm used to find all the prime numbers between the first prime $2$ and a given limit $n$.
 
 ## Usage
 
