@@ -20,7 +20,7 @@ pub fn sieve_of_eratosthenes(n: u32) -> Vec<u32> {
         }
     }
 
-    let mut primes: Vec<u32> = Vec::new();
+    let mut primes: Vec<u32> = Vec::default();
 
     for (pos, is_prime) in is_prime_v.iter().enumerate() {
         if *is_prime {
