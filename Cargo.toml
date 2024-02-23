@@ -1,7 +1,11 @@
 [package]
 name = "sieve-of-eratosthenes"
+authors = ["Tristan Wainwright <wainwright@disroot.org>"]
+description = "Generates a vector of prime numbers from 2 to a given n."
+repository = "https://github.com/tristanwainwright/sieve-of-eratosthenes/"
 version = "0.1.0"
 edition = "2021"
+license = "MPL-2.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
